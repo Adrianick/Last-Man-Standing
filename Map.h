@@ -15,16 +15,17 @@
 #include "Agent_Type2.h"
 
 class Map {
-    short int numberOfItemsAvailable; /// cate iteme sunt pe harta nefolosite
-    short int numberOfAgentsAlive; /// cati agenti in viata sunt
-    short int map[3][3]; /// dimensiunea harti
+    int numberOfItemsAvailable; /// cate iteme sunt pe harta nefolosite
+    int numberOfAgentsAlive; /// cati agenti in viata sunt
+    int map[3][3]; /// dimensiunea harti
     std::map<int, Agent *> idMap;
-    std::vector<Agent *> agents;
+   // std::vector<Agent *> agents;
 
 public:
     Map();
     ~Map();
 
+    void rundaJoc();
 
 
 };

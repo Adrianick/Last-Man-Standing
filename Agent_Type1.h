@@ -11,6 +11,8 @@ class Agent_Type1 : public Agent{
 
 public:
     Agent_Type1();
+
+    std::pair<int,int> moveAgent(int map[3][3]);
 };
 
 

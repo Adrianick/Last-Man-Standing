@@ -8,11 +8,11 @@
 #include <utility>
 
 class Agent {
-    short int health; /// viata
-    short int damage; /// puterea
-    short int speed; /// cate patratele se misca pe harta
-    short int id; /// daca sunt 10 agenti pe harta si acest agent este al 7-lea atunci ID = 5
-    std::pair<short int, short int> positionOnMap;
+    int health; /// viata
+    int damage; /// puterea
+    int speed; /// cate patratele se misca pe harta
+    int id; /// daca sunt 10 agenti pe harta si acest agent este al 7-lea atunci ID = 5
+    std::pair<int, int> positionOnMap;
 
 public:
     void setHealth(int hp);
@@ -24,7 +24,9 @@ public:
     void setId(int index);
     int getId();
     void setPosition(int linie, int coloana);
-    std::pair<short int, short int> getPosition();
+    std::pair<int, int> getPosition();
+
+    virtual std::pair<int, int> moveAgent(int map[3][3]){};
 
 };
 

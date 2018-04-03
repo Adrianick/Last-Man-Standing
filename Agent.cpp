@@ -32,6 +32,6 @@ void Agent::setPosition(int linie, int coloana){
     positionOnMap.first = linie;
     positionOnMap.second = coloana;
 }
-std::pair<short int, short int> Agent::getPosition(){
+std::pair<int, int> Agent::getPosition(){
     return positionOnMap;
 }
