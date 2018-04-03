@@ -122,6 +122,168 @@ SurvivalGamePooProiect2/fast:
 	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/build
 .PHONY : SurvivalGamePooProiect2/fast
 
+Agent.obj: Agent.cpp.obj
+
+.PHONY : Agent.obj
+
+# target to build an object file
+Agent.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.obj
+.PHONY : Agent.cpp.obj
+
+Agent.i: Agent.cpp.i
+
+.PHONY : Agent.i
+
+# target to preprocess a source file
+Agent.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.i
+.PHONY : Agent.cpp.i
+
+Agent.s: Agent.cpp.s
+
+.PHONY : Agent.s
+
+# target to generate assembly for a file
+Agent.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.s
+.PHONY : Agent.cpp.s
+
+Agent_Type1.obj: Agent_Type1.cpp.obj
+
+.PHONY : Agent_Type1.obj
+
+# target to build an object file
+Agent_Type1.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type1.cpp.obj
+.PHONY : Agent_Type1.cpp.obj
+
+Agent_Type1.i: Agent_Type1.cpp.i
+
+.PHONY : Agent_Type1.i
+
+# target to preprocess a source file
+Agent_Type1.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type1.cpp.i
+.PHONY : Agent_Type1.cpp.i
+
+Agent_Type1.s: Agent_Type1.cpp.s
+
+.PHONY : Agent_Type1.s
+
+# target to generate assembly for a file
+Agent_Type1.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type1.cpp.s
+.PHONY : Agent_Type1.cpp.s
+
+Agent_Type2.obj: Agent_Type2.cpp.obj
+
+.PHONY : Agent_Type2.obj
+
+# target to build an object file
+Agent_Type2.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type2.cpp.obj
+.PHONY : Agent_Type2.cpp.obj
+
+Agent_Type2.i: Agent_Type2.cpp.i
+
+.PHONY : Agent_Type2.i
+
+# target to preprocess a source file
+Agent_Type2.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type2.cpp.i
+.PHONY : Agent_Type2.cpp.i
+
+Agent_Type2.s: Agent_Type2.cpp.s
+
+.PHONY : Agent_Type2.s
+
+# target to generate assembly for a file
+Agent_Type2.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type2.cpp.s
+.PHONY : Agent_Type2.cpp.s
+
+Agent_Type3.obj: Agent_Type3.cpp.obj
+
+.PHONY : Agent_Type3.obj
+
+# target to build an object file
+Agent_Type3.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type3.cpp.obj
+.PHONY : Agent_Type3.cpp.obj
+
+Agent_Type3.i: Agent_Type3.cpp.i
+
+.PHONY : Agent_Type3.i
+
+# target to preprocess a source file
+Agent_Type3.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type3.cpp.i
+.PHONY : Agent_Type3.cpp.i
+
+Agent_Type3.s: Agent_Type3.cpp.s
+
+.PHONY : Agent_Type3.s
+
+# target to generate assembly for a file
+Agent_Type3.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type3.cpp.s
+.PHONY : Agent_Type3.cpp.s
+
+Item.obj: Item.cpp.obj
+
+.PHONY : Item.obj
+
+# target to build an object file
+Item.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj
+.PHONY : Item.cpp.obj
+
+Item.i: Item.cpp.i
+
+.PHONY : Item.i
+
+# target to preprocess a source file
+Item.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.i
+.PHONY : Item.cpp.i
+
+Item.s: Item.cpp.s
+
+.PHONY : Item.s
+
+# target to generate assembly for a file
+Item.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.s
+.PHONY : Item.cpp.s
+
+Map.obj: Map.cpp.obj
+
+.PHONY : Map.obj
+
+# target to build an object file
+Map.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj
+.PHONY : Map.cpp.obj
+
+Map.i: Map.cpp.i
+
+.PHONY : Map.i
+
+# target to preprocess a source file
+Map.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.i
+.PHONY : Map.cpp.i
+
+Map.s: Map.cpp.s
+
+.PHONY : Map.s
+
+# target to generate assembly for a file
+Map.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.s
+.PHONY : Map.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +320,24 @@ help:
 	@echo ... rebuild_cache
 	@echo ... SurvivalGamePooProiect2
 	@echo ... edit_cache
+	@echo ... Agent.obj
+	@echo ... Agent.i
+	@echo ... Agent.s
+	@echo ... Agent_Type1.obj
+	@echo ... Agent_Type1.i
+	@echo ... Agent_Type1.s
+	@echo ... Agent_Type2.obj
+	@echo ... Agent_Type2.i
+	@echo ... Agent_Type2.s
+	@echo ... Agent_Type3.obj
+	@echo ... Agent_Type3.i
+	@echo ... Agent_Type3.s
+	@echo ... Item.obj
+	@echo ... Item.i
+	@echo ... Item.s
+	@echo ... Map.obj
+	@echo ... Map.i
+	@echo ... Map.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

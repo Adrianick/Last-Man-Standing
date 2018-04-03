@@ -1,0 +1,14 @@
+//
+// Created by Adrian on 4/3/2018.
+//
+
+#ifndef SURVIVALGAMEPOOPROIECT2_ITEM_H
+#define SURVIVALGAMEPOOPROIECT2_ITEM_H
+
+
+class Item {
+
+};
+
+
+#endif //SURVIVALGAMEPOOPROIECT2_ITEM_H

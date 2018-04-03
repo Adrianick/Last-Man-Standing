@@ -80,6 +80,42 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent_Type1.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent_Type1.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent_Type2.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent_Type2.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent_Type3.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Agent_Type3.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Map.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Map.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
 		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/main.cpp">
 			<Option target="SurvivalGamePooProiect2"/>
 		</Unit>
