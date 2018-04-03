@@ -17,9 +17,8 @@
 class Map {
     int numberOfItemsAvailable; /// cate iteme sunt pe harta nefolosite
     int numberOfAgentsAlive; /// cati agenti in viata sunt
-    int map[3][3]; /// dimensiunea harti
-    std::map<int, Agent *> idMap;
-   // std::vector<Agent *> agents;
+    int mapOfTheGame[3][3]; /// dimensiunea harti
+    std::map<int, Agent *> agents;
 
 public:
     Map();

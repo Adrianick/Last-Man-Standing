@@ -6,13 +6,15 @@
 #define SURVIVALGAMEPOOPROIECT2_AGENT_TYPE1_H
 
 #include "Agent.h"
+#include <map>
+#include <vector>
 
 class Agent_Type1 : public Agent{
 
 public:
     Agent_Type1();
 
-    std::pair<int,int> moveAgent(int map[3][3]);
+    int moveAgent(int map[3][3], std::map<int, Agent *> &agents);
 };
 
 

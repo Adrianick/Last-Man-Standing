@@ -6,6 +6,9 @@
 #define SURVIVALGAMEPOOPROIECT2_AGENT_H
 
 #include <utility>
+#include <vector>
+#include <iostream>
+#include <map>
 
 class Agent {
     int health; /// viata
@@ -26,7 +29,7 @@ public:
     void setPosition(int linie, int coloana);
     std::pair<int, int> getPosition();
 
-    virtual std::pair<int, int> moveAgent(int map[3][3]){};
+    virtual int moveAgent(int mapOfTheGame[3][3], std::map<int, Agent *> &agents){};
 
 };
 

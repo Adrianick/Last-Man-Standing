@@ -11,5 +11,6 @@ using namespace std;
 int main() {
 
     Map harta;
+    harta.rundaJoc();
     return 0;
 }
