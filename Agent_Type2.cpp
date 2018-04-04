@@ -15,11 +15,10 @@ Agent_Type2::Agent_Type2() {
     setSpeed(1);
 }
 
-int Agent_Type2::moveAgent(int mapOfTheGame[4][4], std::map<int, Agent *> &agents) { /// Acesta se va misca doar pe diagonale
+int Agent_Type2::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents) { /// Acesta se va misca doar pe diagonale
 
     unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
     std::default_random_engine e(seed);
-
 
     int step = 1;
     if(getSpeed() > 1) step = 1 + e()%getSpeed();  /// setam cati pasi o sa se miste agentul, intre 1 si "speed"
@@ -45,28 +44,28 @@ int Agent_Type2::moveAgent(int mapOfTheGame[4][4], std::map<int, Agent *> &agent
                 linie = 0*step;
                 coloana = -1*step;
                 break;
-            default:
-                linie = 0*step;
-                coloana = 0*step;
-                break;
         }
-    }while(pozitieX + linie > 2 || pozitieY + coloana > 2 || pozitieX + linie < 0 || pozitieY + coloana < 0);
+    }while(pozitieX + linie > 14 || pozitieY + coloana > 14 || pozitieX + linie < 0 || pozitieY + coloana < 0);
 
-    std::cout << "Agentul " << getId() << "\n";
+   /* std::cout << "Agentul " << getId() << "\n";
     std::cout << "pozitieX = " << pozitieX + 1 << "\n";
     std::cout << "pozitieY = " << pozitieY  + 1<< "\n";
     std::cout << "linie = " << linie << "\n";
-    std::cout << "coloana= " << coloana << "\n";
+    std::cout << "coloana= " << coloana << "\n";*/
 
     int trebuieSters = 0;
+    std::cout << "Agentul: " << getId() << " paseste pe linia: " << pozitieX+linie+1 << " si coloana: " << pozitieY+coloana+1 << "\n";
     if(mapOfTheGame[pozitieX + linie][pozitieY + coloana] > 0){
         Agent &agentInamic = *(agents.find(mapOfTheGame[pozitieX + linie][pozitieY + coloana])->second);
         trebuieSters = luptaAgenti(*this, agentInamic);
         mapOfTheGame[pozitieX][pozitieY] = 0;
+        std::cout << "O lupta a avut loc intre agentul: " << getId() << " si agentul: " << agentInamic.getId() << " \n";
         if(agentInamic.getHealth() < 1) {
             mapOfTheGame[pozitieX+linie][pozitieY+coloana] = getId();
             setPosition(pozitieX + linie, pozitieY + coloana);
-        }
+            std::cout << "Agentul: " << getId() << " a castigat lupta si a ramas cu : " << getHealth() << " viata" << " \n";
+        }else
+            std::cout << "Agentul: " << agentInamic.getId() << " a castigat lupta si a ramas cu : " << agentInamic.getHealth() << " viata" << " \n";
     }
     else if(mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) {
         setPosition(pozitieX + linie, pozitieY + coloana);

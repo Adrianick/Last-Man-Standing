@@ -22,12 +22,14 @@ CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj: ../Item.h
 CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj: ../Agent.h
 CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj: ../Agent_Type1.h
 CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj: ../Agent_Type2.h
+CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj: ../Agent_Type3.h
 CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj: ../Map.cpp
 CMakeFiles/SurvivalGamePooProiect2.dir/Map.cpp.obj: ../Map.h
 
 CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj: ../Agent.h
 CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj: ../Agent_Type1.h
 CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj: ../Agent_Type2.h
+CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj: ../Agent_Type3.h
 CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj: ../Map.h
 CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj: ../main.cpp
 

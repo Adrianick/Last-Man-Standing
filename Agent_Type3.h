@@ -12,7 +12,7 @@ class Agent_Type3 : public Agent {
 public:
     Agent_Type3();
 
-    int moveAgent(int map[4][4], std::map<int, Agent *> &agents);
+    int moveAgent(int map[15][15], std::map<int, Agent *> &agents);
 };
 
 

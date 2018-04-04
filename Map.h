@@ -18,7 +18,7 @@
 class Map {
     int numberOfItemsAvailable; /// cate iteme sunt pe harta nefolosite
     int numberOfAgentsAlive; /// cati agenti in viata sunt
-    int mapOfTheGame[4][4]; /// dimensiunea harti
+    int mapOfTheGame[15][15]; /// dimensiunea harti
     std::map<int, Agent *> agents;
 
 public:
@@ -27,6 +27,8 @@ public:
 
     void rundaJoc();
     void simulareJoc();
+    void afisareHarta();
+    void afisareInformatiiCurente();
 };
 
 

@@ -31,7 +31,7 @@ public:
 
     int luptaAgenti(Agent & agent1, Agent & agent2); /// returnam id-ul celui care trebuie sters!
 
-    virtual int moveAgent(int mapOfTheGame[4][4], std::map<int, Agent *> &agents){};
+    virtual int moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents){};
 
 };
 
