@@ -15,38 +15,39 @@ Agent_Type1::Agent_Type1() {
     setSpeed(2);
 }
 
-int Agent_Type1::moveAgent(int mapOfTheGame[3][3], std::map<int, Agent *> &agents) { /// Acesta se va misca doar pe diagonale
+int Agent_Type1::moveAgent(int mapOfTheGame[4][4], std::map<int, Agent *> &agents) { /// Acesta se va misca doar pe diagonale
 
     unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
     std::default_random_engine e(seed);
 
 
     int step = 1;
-    if(getSpeed() > 1) step = 1 + e()%getSpeed();  /// setam cati pasi o sa se miste agentul, intre 1 si "speed"
+
 
     int pozitieX = getPosition().first, pozitieY = getPosition().second;
     int linie, coloana;
     do {
+        if(getSpeed() > 1) step = 1 + e()%getSpeed();  /// setam cati pasi o sa se miste agentul, intre 1 si "speed"
         switch (e() % 4) {
             case 0:
-                linie = -1;
-                coloana = -1;
+                linie = -1*step;
+                coloana = -1*step;
                 break;
             case 1:
-                linie = -1;
-                coloana = 1;
+                linie = -1*step;
+                coloana = 1*step;
                 break;
             case 2:
-                linie = 1;
-                coloana = -1;
+                linie = 1*step;
+                coloana = -1*step;
                 break;
             case 3:
-                linie = 1;
-                coloana = 1;
+                linie = 1*step;
+                coloana = 1*step;
                 break;
             default:
-                linie = 0;
-                coloana = 0;
+                linie = 0*step;
+                coloana = 0*step;
                 break;
         }
     }while(pozitieX + linie > 2 || pozitieY + coloana > 2 || pozitieX + linie < 0 || pozitieY + coloana < 0);
@@ -54,15 +55,18 @@ int Agent_Type1::moveAgent(int mapOfTheGame[3][3], std::map<int, Agent *> &agent
     std::cout << "Agentul " << getId() << "\n";
     std::cout << "pozitieX = " << pozitieX + 1 << "\n";
     std::cout << "pozitieY = " << pozitieY  + 1<< "\n";
-    /*std::cout << "pozitieX +linie = " << pozitieX +linie + 1 << "\n";
-    std::cout << "pozitieY +coloana= " << pozitieY  +coloana + 1<< "\n";*/
     std::cout << "linie = " << linie << "\n";
     std::cout << "coloana= " << coloana << "\n";
 
-    bool trebuieSters = 0;
+    int trebuieSters = 0;
         if(mapOfTheGame[pozitieX + linie][pozitieY + coloana] > 0){
-            trebuieSters = 1;
+            Agent &agentInamic = *(agents.find(mapOfTheGame[pozitieX + linie][pozitieY + coloana])->second);
+            trebuieSters = luptaAgenti(*this, agentInamic);
             mapOfTheGame[pozitieX][pozitieY] = 0;
+            if(agentInamic.getHealth() < 1) {
+                mapOfTheGame[pozitieX+linie][pozitieY+coloana] = getId();
+                setPosition(pozitieX + linie, pozitieY + coloana);
+            }
         }
         else if(mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) {
             setPosition(pozitieX + linie, pozitieY + coloana);
@@ -72,15 +76,9 @@ int Agent_Type1::moveAgent(int mapOfTheGame[3][3], std::map<int, Agent *> &agent
 
 
 
-   for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            std::cout << mapOfTheGame[i][j] << "  ";
-        }
-        std::cout << std::endl;
-    } /// Afisare Harta
-
-    if(trebuieSters == 1)
-        return getId();
+    //// trebuie sa dau return la Agentul care trebuie sters in functie de lupta dintre ei
+    if(trebuieSters > 0)
+        return trebuieSters;
 
     return -1;
 }

@@ -29,7 +29,9 @@ public:
     void setPosition(int linie, int coloana);
     std::pair<int, int> getPosition();
 
-    virtual int moveAgent(int mapOfTheGame[3][3], std::map<int, Agent *> &agents){};
+    int luptaAgenti(Agent & agent1, Agent & agent2); /// returnam id-ul celui care trebuie sters!
+
+    virtual int moveAgent(int mapOfTheGame[4][4], std::map<int, Agent *> &agents){};
 
 };
 

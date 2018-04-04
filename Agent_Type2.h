@@ -11,6 +11,8 @@ class Agent_Type2 : public Agent{
 
 public:
     Agent_Type2();
+
+    int moveAgent(int map[4][4], std::map<int, Agent *> &agents);
 };
 
 
