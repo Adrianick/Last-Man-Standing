@@ -110,6 +110,24 @@
 		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item.h">
 			<Option target="SurvivalGamePooProiect2"/>
 		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item_Type1.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item_Type1.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item_Type2.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item_Type2.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item_Type3.cpp">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
+		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Item_Type3.h">
+			<Option target="SurvivalGamePooProiect2"/>
+		</Unit>
 		<Unit filename="F:/UNIBUC/SEM 2/POO/SurvivalGamePooProiect2/Map.cpp">
 			<Option target="SurvivalGamePooProiect2"/>
 		</Unit>

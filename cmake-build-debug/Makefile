@@ -257,6 +257,87 @@ Item.cpp.s:
 	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
+Item_Type1.obj: Item_Type1.cpp.obj
+
+.PHONY : Item_Type1.obj
+
+# target to build an object file
+Item_Type1.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj
+.PHONY : Item_Type1.cpp.obj
+
+Item_Type1.i: Item_Type1.cpp.i
+
+.PHONY : Item_Type1.i
+
+# target to preprocess a source file
+Item_Type1.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.i
+.PHONY : Item_Type1.cpp.i
+
+Item_Type1.s: Item_Type1.cpp.s
+
+.PHONY : Item_Type1.s
+
+# target to generate assembly for a file
+Item_Type1.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.s
+.PHONY : Item_Type1.cpp.s
+
+Item_Type2.obj: Item_Type2.cpp.obj
+
+.PHONY : Item_Type2.obj
+
+# target to build an object file
+Item_Type2.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj
+.PHONY : Item_Type2.cpp.obj
+
+Item_Type2.i: Item_Type2.cpp.i
+
+.PHONY : Item_Type2.i
+
+# target to preprocess a source file
+Item_Type2.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.i
+.PHONY : Item_Type2.cpp.i
+
+Item_Type2.s: Item_Type2.cpp.s
+
+.PHONY : Item_Type2.s
+
+# target to generate assembly for a file
+Item_Type2.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.s
+.PHONY : Item_Type2.cpp.s
+
+Item_Type3.obj: Item_Type3.cpp.obj
+
+.PHONY : Item_Type3.obj
+
+# target to build an object file
+Item_Type3.cpp.obj:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj
+.PHONY : Item_Type3.cpp.obj
+
+Item_Type3.i: Item_Type3.cpp.i
+
+.PHONY : Item_Type3.i
+
+# target to preprocess a source file
+Item_Type3.cpp.i:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.i
+.PHONY : Item_Type3.cpp.i
+
+Item_Type3.s: Item_Type3.cpp.s
+
+.PHONY : Item_Type3.s
+
+# target to generate assembly for a file
+Item_Type3.cpp.s:
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.s
+.PHONY : Item_Type3.cpp.s
+
 Map.obj: Map.cpp.obj
 
 .PHONY : Map.obj
@@ -335,6 +416,15 @@ help:
 	@echo ... Item.obj
 	@echo ... Item.i
 	@echo ... Item.s
+	@echo ... Item_Type1.obj
+	@echo ... Item_Type1.i
+	@echo ... Item_Type1.s
+	@echo ... Item_Type2.obj
+	@echo ... Item_Type2.i
+	@echo ... Item_Type2.s
+	@echo ... Item_Type3.obj
+	@echo ... Item_Type3.i
+	@echo ... Item_Type3.s
 	@echo ... Map.obj
 	@echo ... Map.i
 	@echo ... Map.s

@@ -224,6 +224,78 @@ CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj.provides: CMakeFiles/Surviva
 CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj.provides.build: CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj
 
 
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj: CMakeFiles/SurvivalGamePooProiect2.dir/flags.make
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj: ../Item_Type1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type1.cpp.obj -c "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type1.cpp"
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type1.cpp" > CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type1.cpp.i
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type1.cpp" -o CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type1.cpp.s
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.requires:
+
+.PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.requires
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.provides: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.provides.build
+.PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.provides
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.provides.build: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj
+
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj: CMakeFiles/SurvivalGamePooProiect2.dir/flags.make
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj: ../Item_Type2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type2.cpp.obj -c "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type2.cpp"
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type2.cpp" > CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type2.cpp.i
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type2.cpp" -o CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type2.cpp.s
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.requires:
+
+.PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.requires
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.provides: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.provides.build
+.PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.provides
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.provides.build: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj
+
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj: CMakeFiles/SurvivalGamePooProiect2.dir/flags.make
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj: ../Item_Type3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type3.cpp.obj -c "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type3.cpp"
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type3.cpp" > CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type3.cpp.i
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\Item_Type3.cpp" -o CMakeFiles\SurvivalGamePooProiect2.dir\Item_Type3.cpp.s
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.requires:
+
+.PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.requires
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.provides: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\SurvivalGamePooProiect2.dir\build.make CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.provides.build
+.PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.provides
+
+CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.provides.build: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj
+
+
 # Object files for target SurvivalGamePooProiect2
 SurvivalGamePooProiect2_OBJECTS = \
 "CMakeFiles/SurvivalGamePooProiect2.dir/main.cpp.obj" \
@@ -232,7 +304,10 @@ SurvivalGamePooProiect2_OBJECTS = \
 "CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.obj" \
 "CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type2.cpp.obj" \
 "CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type3.cpp.obj" \
-"CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj"
+"CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj" \
+"CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj" \
+"CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj" \
+"CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj"
 
 # External object files for target SurvivalGamePooProiect2
 SurvivalGamePooProiect2_EXTERNAL_OBJECTS =
@@ -244,11 +319,14 @@ SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.ob
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type2.cpp.obj
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type3.cpp.obj
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj
+SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj
+SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj
+SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/build.make
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/linklibs.rsp
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/objects1.rsp
 SurvivalGamePooProiect2.exe: CMakeFiles/SurvivalGamePooProiect2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable SurvivalGamePooProiect2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="F:\UNIBUC\SEM 2\POO\SurvivalGamePooProiect2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable SurvivalGamePooProiect2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SurvivalGamePooProiect2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -263,6 +341,9 @@ CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProie
 CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type2.cpp.obj.requires
 CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type3.cpp.obj.requires
 CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProiect2.dir/Item.cpp.obj.requires
+CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type1.cpp.obj.requires
+CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type2.cpp.obj.requires
+CMakeFiles/SurvivalGamePooProiect2.dir/requires: CMakeFiles/SurvivalGamePooProiect2.dir/Item_Type3.cpp.obj.requires
 
 .PHONY : CMakeFiles/SurvivalGamePooProiect2.dir/requires
 

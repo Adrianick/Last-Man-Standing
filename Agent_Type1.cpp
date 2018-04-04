@@ -8,6 +8,7 @@
 #include <chrono>
 #include <vector>
 #include <map>
+#include "Item.h"
 
 Agent_Type1::Agent_Type1() {
     setHealth(100);
@@ -89,6 +90,15 @@ int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
             mapOfTheGame[pozitieX][pozitieY] = 0;
             mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
         }
+        /*else{ /// Calcam pe un item
+            setPosition(pozitieX + linie, pozitieY + coloana);
+            mapOfTheGame[pozitieX][pozitieY] = 0;
+            items.find(mapOfTheGame[pozitieX][pozitieY])->second->equipItem(*this);
+            delete items.find(mapOfTheGame[pozitieX][pozitieY])->second;
+            items.erase(mapOfTheGame[pozitieX][pozitieY]);
+            mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
+
+        }*/
 
 
 

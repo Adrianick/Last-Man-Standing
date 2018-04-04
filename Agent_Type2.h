@@ -6,6 +6,7 @@
 #define SURVIVALGAMEPOOPROIECT2_AGENT_TYPE2_H
 
 #include "Agent.h"
+#include "Item.h"
 
 class Agent_Type2 : public Agent{
 

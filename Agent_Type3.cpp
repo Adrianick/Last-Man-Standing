@@ -89,7 +89,14 @@ int Agent_Type3::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
         setPosition(pozitieX + linie, pozitieY + coloana);
         mapOfTheGame[pozitieX][pozitieY] = 0;
         mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
-    }
+    }/*else{ /// Calcam pe un item
+        setPosition(pozitieX + linie, pozitieY + coloana);
+        mapOfTheGame[pozitieX][pozitieY] = 0;
+        items.find(mapOfTheGame[pozitieX][pozitieY])->second->equipItem(*this);
+        delete items.find(mapOfTheGame[pozitieX][pozitieY])->second;
+        items.erase(mapOfTheGame[pozitieX][pozitieY]);
+        mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
+    }*/
 
 
     //// trebuie sa dau return la Agentul care trebuie sters in functie de lupta dintre ei

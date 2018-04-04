@@ -11,15 +11,15 @@
 #include <utility>
 #include <map>
 #include "Agent.h"
-#include "Agent_Type1.h"
-#include "Agent_Type2.h"
-#include "Agent_Type3.h"
+#include "Item.h"
+
 
 class Map {
     int numberOfItemsAvailable; /// cate iteme sunt pe harta nefolosite
     int numberOfAgentsAlive; /// cati agenti in viata sunt
     int mapOfTheGame[15][15]; /// dimensiunea harti
     std::map<int, Agent *> agents;
+    std::map<int, Item *> items;
 
 public:
     Map();

@@ -8,6 +8,8 @@
 #include "Agent.h"
 #include <map>
 #include <vector>
+#include "Item.h"
+#include "Map.h"
 
 class Agent_Type1 : public Agent{
 

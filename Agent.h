@@ -10,6 +10,7 @@
 #include <iostream>
 #include <map>
 
+
 class Agent {
     int health; /// viata
     int damage; /// puterea
