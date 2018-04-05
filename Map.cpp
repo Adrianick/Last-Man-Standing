@@ -90,8 +90,12 @@ Map::Map() {
 
 
 
-    std::cout << "Harta initiala  arata astfel: \n";
+   //std::cout << "Harta initiala  arata astfel: \n";
+    std::cout << "Initial map looks like : \n";
     afisareHarta();
+}
+void Map::setNumberOfItemsAvailable(int items){
+    numberOfItemsAvailable = items;
 }
 
 Map::~Map() {
@@ -103,14 +107,21 @@ void Map::simulareJoc() {
             rundaJoc();
             nrRunde++;
         }
-    std::cout << "Agentul castigator este : " << agents.begin()->first << "\n";
-    std::cout << "Numar total de runde : " << nrRunde << "\n";
-    std::cout << "SIMULARE TERMINATA! \n";
+  //  std::cout << "Agentul castigator este : " << agents.begin()->first << " ";
+    std::cout << "Winner is agent number : " << agents.begin()->first << " ";
+   if(agents.begin()->second->getItemEquiped() != 0)
+       std::cout << " , he won weilding item : " << agents.begin()->second->getItemEquiped(); //  std::cout << " si a castigat manuind item-ul : " << agents.begin()->second->getItemEquiped();
+
+    std::cout << "\n";
+    std::cout << "Total number of rounds : " << nrRunde << "\n";
+    std::cout << "SIMULATION FINISHED! \n";
+    //std::cout << "Numar total de runde : " << nrRunde << "\n";
+   // std::cout << "SIMULARE TERMINATA! \n";
 }
 
 void Map::rundaJoc() {
     for(auto it = agents.begin(); it != agents.end();++it){
-        int desters = (*it).second->moveAgent(mapOfTheGame, agents);
+        int desters = (*it).second->moveAgent(mapOfTheGame, agents, items);
         if(desters > 0) {
             numberOfAgentsAlive--;
             delete agents.find(desters)->second;
@@ -122,7 +133,22 @@ void Map::rundaJoc() {
 }
 
 void Map::afisareHarta() {
+
+    std::cout << " X  |Y: ";
+    for(int i=1; i<=15; i++){
+        std::cout << i << " ";
+        if(i<10)
+            std::cout << " ";
+    }
+    std::cout << "\n";
+    for(int i=1; i<=55; i++){
+        std::cout << "_";
+    }
+    std::cout << "\n";
+
     for (int i = 0; i < 15; i++) {
+        if(i<9) std::cout << " ";
+        std::cout << i+1 << "  |   ";
         for (int j = 0; j < 15; j++) {
             std::cout << mapOfTheGame[i][j] << " ";
             if(mapOfTheGame[i][j] < 10 && mapOfTheGame[i][j] >= 0) std::cout << " ";
@@ -133,6 +159,8 @@ void Map::afisareHarta() {
 
 void Map::afisareInformatiiCurente(){
     afisareHarta();
-    std::cout << "Agenti in viata : " << numberOfAgentsAlive << "\n";
-    std::cout << "Iteme pe harta : " << numberOfItemsAvailable << "\n\n";
+    std::cout << "Agents alive : " << numberOfAgentsAlive << "\n";
+    std::cout << "Items on map : " << numberOfItemsAvailable << "\n\n";
+   // std::cout << "Agenti in viata : " << numberOfAgentsAlive << "\n";
+  //  std::cout << "Iteme pe harta : " << numberOfItemsAvailable << "\n\n";
 }

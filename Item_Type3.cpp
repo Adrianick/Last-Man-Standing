@@ -13,7 +13,7 @@ void Item_Type3::itemEquip(Agent & a) {
     ///  if() - verify what type of agent is
     a.setDamage(a.getDamage()+getDamageBonus());
     a.setHealth(a.getHealth()+getHpBonus());
-  ////////  a.setSpeed(a.getSpeed()+getSpeedBonus());
+    a.setSpeed(a.getSpeed()+getSpeedBonus());
 }
 
 void Item_Type3::zi(){

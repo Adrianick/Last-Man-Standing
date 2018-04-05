@@ -29,6 +29,7 @@ public:
     void simulareJoc();
     void afisareHarta();
     void afisareInformatiiCurente();
+    void setNumberOfItemsAvailable(int items);
 };
 
 

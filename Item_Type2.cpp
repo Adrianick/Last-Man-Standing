@@ -12,8 +12,9 @@ Item_Type2::Item_Type2() {
 void Item_Type2::itemEquip(Agent & a) {
     ///  if() - verify what type of agent is
     a.setDamage(a.getDamage()+getDamageBonus());
-    a.setHealth(a.getHealth()+getHpBonus());
-   ///// a.setSpeed(a.getSpeed()+getSpeedBonus());
+    a.setSpeed(a.getSpeed()+getSpeedBonus());
+    if(a.getHealth() > 30)
+        a.setHealth(a.getHealth()+getHpBonus());
 }
 
 void Item_Type2::zi(){

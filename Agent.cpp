@@ -3,6 +3,8 @@
 //
 
 #include "Agent.h"
+#include "Item.h"
+#include "Map.h"
 
 void Agent::setHealth(int hp){
     health = hp;
@@ -35,6 +37,14 @@ void Agent::setPosition(int linie, int coloana){
 std::pair<int, int> Agent::getPosition(){
     return positionOnMap;
 }
+
+void Agent::setItemEquiped(int item){
+    itemEquiped = item;
+}
+int Agent::getItemEquiped(){
+    return itemEquiped;
+}
+
 int Agent::luptaAgenti(Agent & agent1, Agent & agent2){ ///agent 1 ataca primul pentru ca are elementul surpriza ;
                                                         /// return cel care moare
     int dmgAgent1 = agent1.getDamage();

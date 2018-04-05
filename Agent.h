@@ -10,12 +10,14 @@
 #include <iostream>
 #include <map>
 
+class Item;
 
 class Agent {
     int health; /// viata
     int damage; /// puterea
     int speed; /// cate patratele se misca pe harta
     int id; /// daca sunt 10 agenti pe harta si acest agent este al 7-lea atunci ID = 5
+    int itemEquiped;
     std::pair<int, int> positionOnMap;
 
 public:
@@ -29,10 +31,12 @@ public:
     int getId();
     void setPosition(int linie, int coloana);
     std::pair<int, int> getPosition();
+    void setItemEquiped(int item);
+    int getItemEquiped();
 
     int luptaAgenti(Agent & agent1, Agent & agent2); /// returnam id-ul celui care trebuie sters!
 
-    virtual int moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents){};
+    virtual int moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items){};
 
 };
 
