@@ -15,8 +15,10 @@ using namespace std;
 int main() {
 
    Map harta;
-     //harta.rundaJoc();
-    harta.simulareJoc();
+    //harta.rundaJoc();
+     harta.simulareJoc();
+   // harta.simulareRunde();
+
 
 
     return 0;

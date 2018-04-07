@@ -29,7 +29,6 @@ public:
     std::pair<int, int> getItemPosition();
 
     virtual void itemEquip(Agent & a){};
-    virtual void zi(){};
 };
 
 

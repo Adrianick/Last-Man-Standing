@@ -27,6 +27,7 @@ public:
 
     void rundaJoc();
     void simulareJoc();
+    void simulareRunde();
     void afisareHarta();
     void afisareInformatiiCurente();
     void setNumberOfItemsAvailable(int items);

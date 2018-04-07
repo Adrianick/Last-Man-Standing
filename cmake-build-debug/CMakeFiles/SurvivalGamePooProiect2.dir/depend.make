@@ -3,8 +3,6 @@
 
 CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.obj: ../Agent.cpp
 CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.obj: ../Agent.h
-CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.obj: ../Item.h
-CMakeFiles/SurvivalGamePooProiect2.dir/Agent.cpp.obj: ../Map.h
 
 CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type1.cpp.obj: ../Agent.h
 CMakeFiles/SurvivalGamePooProiect2.dir/Agent_Type1.cpp.obj: ../Agent_Type1.cpp

@@ -11,7 +11,6 @@ class Item_Type1 : public Item {
 
 public:
     Item_Type1();
-    void zi();
     void itemEquip(Agent & a);
 };
 

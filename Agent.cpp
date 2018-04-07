@@ -3,8 +3,6 @@
 //
 
 #include "Agent.h"
-#include "Item.h"
-#include "Map.h"
 
 void Agent::setHealth(int hp){
     health = hp;
