@@ -17,7 +17,7 @@ class Item {
     std::pair<int, int> itemPositionOnMap;
 
 public:
-    void setDamageBonus(int dmgB);
+    void setDamageBonus(int dmgB);  // aici setez damage-ul
     int getDamageBonus();
     void setSpeedBonus(int spdB);
     int getSpeedBonus();

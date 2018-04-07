@@ -193,7 +193,7 @@ void Map::afisareHarta() {
             std::cout << " ";
     }
     std::cout << "\n";
-    for(int i=1; i<=55; i++){
+    for(int i=1; i<=70; i++){
         std::cout << "_";
     }
     std::cout << "\n";
@@ -207,8 +207,12 @@ void Map::afisareHarta() {
                 std::cout<< " ";
             if(mapOfTheGame[i][j] <= 9 && mapOfTheGame[i][j] >= 0) std::cout << " ";
         }
-        std::cout << "\n\n";
+        std::cout << "| \n\n";
     }
+    for(int i=1; i<=70; i++){
+        std::cout << "-";
+    }
+    std::cout << "\n";
 }
 
 void Map::afisareInformatiiCurente(){
