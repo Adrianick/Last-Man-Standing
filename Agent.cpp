@@ -3,6 +3,29 @@
 //
 
 #include "Agent.h"
+#include "Item.h"
+
+
+Agent::Agent(int health, int damage, int speed, int itemEquipedId){
+    this->health = health;
+    this->damage = damage;
+    this->speed = speed;
+    this->itemEquiped = itemEquipedId;
+}
+
+void Agent::itemEquip(Item * item) {
+
+    if((this->health + item->getHpBonus()) > 0)
+        this->health += item->getHpBonus();
+
+    if((this->damage + item->getDamageBonus()) > 0)
+        this->damage += item->getDamageBonus();
+
+    if((this->speed + item->getSpeedBonus()) > 0)
+        this->speed += item->getSpeedBonus();
+
+    this->id = item->getItemId();
+}
 
 void Agent::setHealth(int hp){
     health = hp;
@@ -28,6 +51,8 @@ void Agent::setId(int index){
 int Agent::getId(){
     return id;
 }
+
+
 void Agent::setPosition(int linie, int coloana){
     positionOnMap.first = linie;
     positionOnMap.second = coloana;
@@ -45,20 +70,20 @@ int Agent::getItemEquiped(){
 
 int Agent::luptaAgenti(Agent & agent1, Agent & agent2){ ///agent 1 ataca primul pentru ca are elementul surpriza ;
                                                         /// return cel care moare
-    int dmgAgent1 = agent1.getDamage();
-    int dmgAgent2 = agent2.getDamage();
-    int healthAgent1 = agent1.getHealth();
-    int healthAgent2 = agent2.getHealth();
+    int dmgAgent1 = agent1.damage;
+    int dmgAgent2 = agent2.damage;
+    int healthAgent1 = agent1.health;
+    int healthAgent2 = agent2.health;
     while(1){
-        agent2.setHealth(healthAgent2-dmgAgent1);
+        agent2.health -= agent1.damage;
         healthAgent2 -= dmgAgent1;
         if(healthAgent2 < 1){
-            return agent2.getId();
+            return agent2.id;
         }
-    agent1.setHealth(healthAgent1-dmgAgent2);
+        agent1.health -= agent2.damage;
     healthAgent1 -= dmgAgent2;
     if(healthAgent1 < 1){
-        return agent1.getId();
+        return agent1.id;
         }
     }
 }

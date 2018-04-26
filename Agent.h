@@ -13,6 +13,8 @@
 class Item;
 
 class Agent {
+
+protected:
     int health; /// viata
     int damage; /// puterea
     int speed; /// cate patratele se misca pe harta
@@ -29,6 +31,9 @@ public:
     int getSpeed();
     void setId(int index);
     int getId();
+
+    Agent(int health, int damage, int speed, int itemEquipedId);
+
     void setPosition(int linie, int coloana);
     std::pair<int, int> getPosition();
     void setItemEquiped(int item);
@@ -36,7 +41,8 @@ public:
 
     int luptaAgenti(Agent & agent1, Agent & agent2); /// returnam id-ul celui care trebuie sters!
 
-    virtual int moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items){};
+    virtual int moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items)=0;
+    virtual void itemEquip(Item * item)=0;
 
 };
 

@@ -10,6 +10,8 @@
 
 
 class Item {
+
+protected:
     int damageBonus;
     int speedBonus;
     int hpBonus;
@@ -17,6 +19,8 @@ class Item {
     std::pair<int, int> itemPositionOnMap;
 
 public:
+    Item(int damage, int speed, int health);
+
     void setDamageBonus(int dmgB);  // aici setez damage-ul
     int getDamageBonus();
     void setSpeedBonus(int spdB);
@@ -24,11 +28,14 @@ public:
     void setHpBonus(int hpB);
     int getHpBonus();
     void setItemId(int id);
-    int getItemId();
+    virtual int getItemId();
     void setItemPosition(int linie,int coloana);
     std::pair<int, int> getItemPosition();
 
-    virtual void itemEquip(Agent & a){};
+    /// sa fac cat sa dureze sau alteceva virtual
+
+
+    virtual void decayItem()=0;
 };
 
 

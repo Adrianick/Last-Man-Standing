@@ -133,6 +133,11 @@ void Map::simulareJoc() {
         while(numberOfAgentsAlive > 1){
             rundaJoc();
             nrRunde++;
+
+            if(nrRunde % 5 == 0) {
+                for(auto i : items)
+                    i.second->decayItem();
+            }
         }
     std::cout << "Agentul castigator este : " << agents.begin()->first << " ";
 
@@ -155,6 +160,11 @@ void Map::simulareRunde() {
             break;
         rundaJoc();
         nrRunde++;
+
+        if(nrRunde % 5 == 0) {
+                for(auto i : items)
+                    i.second->decayItem();
+        }
     }
 
    if(numberOfAgentsAlive == 1) {
@@ -172,14 +182,26 @@ void Map::simulareRunde() {
 }
 
 void Map::rundaJoc() {
+   // for(auto it : agents){
     for(auto it = agents.begin(); it != agents.end();++it){
+
+        if((*it).second->getHealth() < 1)
+            continue;
+
         int desters = (*it).second->moveAgent(mapOfTheGame, agents, items);
         if(desters > 0) {
             numberOfAgentsAlive--;
-            delete agents.find(desters)->second;
-            agents.erase(desters);
+           // delete agents.find(desters)->second;
+           // agents.erase(desters);
         }
+
         numberOfItemsAvailable = items.size();
+    }
+    for(int i=1; i<=20; ++i){
+        if(agents.find(i)->second->getHealth() < 1) {
+            delete agents.find(i)->second;
+            agents.erase(i);
+        }
     }
     afisareInformatiiCurente();
 }

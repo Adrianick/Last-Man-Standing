@@ -4,14 +4,11 @@
 
 #include "Item_Type3.h"
 
-Item_Type3::Item_Type3() {
-    setDamageBonus(35);
-    setSpeedBonus(1);
-    setHpBonus(-20);
-}
-void Item_Type3::itemEquip(Agent & a) {
-    a.setDamage(a.getDamage()+getDamageBonus());
-    a.setSpeed(a.getSpeed()+getSpeedBonus());
-    if(a.getHealth() > 20)
-        a.setHealth(a.getHealth()+getHpBonus());
+Item_Type3::Item_Type3() : Item(35, 1, -20) {}
+
+void Item_Type3::decayItem() {
+    if(hpBonus < 0)
+      hpBonus += 4;
+    if(damageBonus > 0)
+        damageBonus -= 5;
 }

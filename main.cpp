@@ -16,7 +16,7 @@ int main() {
 
    Map harta;
     //harta.rundaJoc();
-     harta.simulareJoc();
+    harta.simulareJoc();
    // harta.simulareRunde();
 
 

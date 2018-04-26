@@ -11,7 +11,7 @@ class Item_Type2 : public Item {
 
 public:
     Item_Type2();
-    void itemEquip(Agent & a);
+    void decayItem() override ;
 };
 
 

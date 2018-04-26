@@ -4,6 +4,12 @@
 
 #include "Item.h"
 
+Item::Item(int damage, int speed, int health){
+    damageBonus = damage;
+    speedBonus = speed;
+    hpBonus = health;
+}
+
 
 void Item::setDamageBonus(int dmgB){
     damageBonus = dmgB;
@@ -23,6 +29,7 @@ void Item::setHpBonus(int hpB){
 int Item::getHpBonus(){
     return hpBonus;
 }
+
 void Item::setItemId(int id){
     itemId = id;
 }

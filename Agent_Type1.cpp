@@ -10,11 +10,20 @@
 #include <map>
 #include "Item.h"
 
-Agent_Type1::Agent_Type1() {
-    setHealth(100);
-    setDamage(30);
-    setSpeed(2);
-    setItemEquiped(0);
+Agent_Type1::Agent_Type1() : Agent(100, 30, 2, 0){}
+
+void Agent_Type1::itemEquip(Item * item) {
+
+    if((this->health + item->getHpBonus()) > 0)
+        this->health += item->getHpBonus();
+
+    if((this->damage + item->getDamageBonus()) > 0)
+        this->damage += item->getDamageBonus();
+
+    if((this->speed + item->getSpeedBonus()) > 0)
+        this->speed += item->getSpeedBonus();
+
+    this->itemEquiped = item->getItemId();
 }
 
 int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents,
@@ -27,9 +36,74 @@ int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
     int step = 1;
 
     int pozitieX = getPosition().first, pozitieY = getPosition().second;
-    int linie, coloana;
+    int linie=0, coloana=0;
+
+    //// tre sa punem linia si coloana sa fie pozitia pe care o sa se duca, directia etc
+
+    int trebuieSters = 0; /// Id-ul celui care va fi sters daca se vor lupta!
+
+    int bestBonus, linieLow, coloanaLow;
+    for(int l=-1*speed; l<=1*speed; l++){
+        for(int c=-1*speed; c<=1*speed; c++) {
+            if(l == 0 && c == 0)
+                continue;
+            if((pozitieX + l) > 14 || (pozitieY + c) > 14 || (pozitieX + l) < 0 || (pozitieY + c) < 0)
+                continue;
+            if(mapOfTheGame[pozitieX + l][pozitieY + c] < 0){
+                Item *itt = items.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second;
+                if(linie == 0){
+                    linie = 1;
+                    bestBonus = itt->getDamageBonus() + itt->getHpBonus();
+                    linieLow = l;
+                    coloanaLow = c;
+                }
+                if(this->damage - agents.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second->getHealth() >= 0) {
+                    Agent &agentInamic = *(agents.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second);
+                    std::cout << "ONE SHOT !!! \n";
+                    std::cout << "Agentul care ataca are damage: " << this->getDamage() << " si inamic are viata: " << agentInamic.getHealth() <<" \n\n";
+                    std::cout << "O lupta a avut loc intre agentul: " << this->id << " si agentul: " << agentInamic.getId() << " \n";
+                    std::cout << "Agentul: " << this->getId() << " a castigat lupta si a ramas cu : "
+                              << this->getHealth() << " viata" << " \n";
+
+                    agentInamic.setHealth(agentInamic.getHealth() - this->damage);
+                    trebuieSters = agentInamic.getId();
+                    mapOfTheGame[pozitieX][pozitieY] = 0;
+                    mapOfTheGame[pozitieX + l][pozitieY + c] = this->getId();
+                    setPosition(pozitieX + l, pozitieY + c);
+                    goto sfarsit;
+                }
+
+                if(bestBonus < itt->getDamageBonus() + itt->getHpBonus()){
+                    bestBonus = itt->getDamageBonus() + itt->getHpBonus();
+                    linieLow = l;
+                    coloanaLow = c;
+                    }
+                }
+            }
+        }
+
+
+    if(linie){/// itemul cel mai bun
+
+        setPosition(pozitieX + linieLow, pozitieY + coloanaLow);
+        mapOfTheGame[pozitieX][pozitieY] = 0;
+        this->itemEquip(items.find(mapOfTheGame[pozitieX + linieLow][pozitieY + coloanaLow])->second);
+
+        std::cout << " Item-ul " << items.find(mapOfTheGame[pozitieX + linieLow][pozitieY + coloanaLow])->second->getItemId()
+                  << " a fost gasit de agentul: " << this->id << " si are damage: "
+                  << this->damage << " , viata : " << this->health << " si viteza " << this->speed <<" \n";
+
+        delete items.find(mapOfTheGame[pozitieX + linieLow][pozitieY + coloanaLow])->second;
+        items.erase(mapOfTheGame[pozitieX + linieLow][pozitieY + coloanaLow]);
+        setItemEquiped(mapOfTheGame[pozitieX + linieLow][pozitieY + coloanaLow]);
+        mapOfTheGame[pozitieX + linieLow][pozitieY + coloanaLow] = this->id;
+
+        goto sfarsit;
+    }
+
+
     do {
-        if (getSpeed() > 1) step = 1 + e() % getSpeed();  /// setam cati pasi o sa se miste agentul, intre 1 si "speed"
+        if (this->speed > 1) step = 1 + e() % this->speed;  /// setam cati pasi o sa se miste agentul, intre 1 si "speed"
         switch (e() % 8) {
             case 0:
                 linie = -1 * step;
@@ -66,8 +140,7 @@ int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
         }
     } while (pozitieX + linie > 14 || pozitieY + coloana > 14 || pozitieX + linie < 0 || pozitieY + coloana < 0);
 
-    int trebuieSters = 0;
-    std::cout << "Agentul: " << getId() << " paseste pe linia: " << pozitieX+linie+1 << " si coloana: "
+    std::cout << "Agentul: " << this->id << " paseste pe linia: " << pozitieX+linie+1 << " si coloana: "
               << pozitieY+coloana+1 << "\n";
 
     if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] > 0) {
@@ -75,35 +148,25 @@ int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
         trebuieSters = luptaAgenti(*this, agentInamic);
         mapOfTheGame[pozitieX][pozitieY] = 0;
 
-        std::cout << "O lupta a avut loc intre agentul: " << getId() << " si agentul: " << agentInamic.getId() << " \n";
+        std::cout << "O lupta a avut loc intre agentul: " << this->id << " si agentul: " << agentInamic.getId() << " \n";
 
         if (agentInamic.getHealth() < 1) {
-            mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
+            mapOfTheGame[pozitieX + linie][pozitieY + coloana] = this->id;
             setPosition(pozitieX + linie, pozitieY + coloana);
 
-            std::cout << "Agentul: " << getId() << " a castigat lupta si a ramas cu : " << getHealth() << " viata" << " \n";
+            std::cout << "Agentul: " << this->id << " a castigat lupta si a ramas cu : " << this->health << " viata" << " \n";
         } else
         std::cout << "Agentul: " << agentInamic.getId() << " a castigat lupta si a ramas cu : "
                   << agentInamic.getHealth() << " viata" << " \n";
 
-    } else if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) {
+    } else/* if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) */{
         setPosition(pozitieX + linie, pozitieY + coloana);
         mapOfTheGame[pozitieX][pozitieY] = 0;
-        mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
-    } else { /// Calcam pe un item
-        setPosition(pozitieX + linie, pozitieY + coloana);
-        mapOfTheGame[pozitieX][pozitieY] = 0;
-        items.find(mapOfTheGame[pozitieX + linie][pozitieY + coloana])->second->itemEquip(*this);
-
-          std::cout << " Item-ul " << items.find(mapOfTheGame[pozitieX + linie][pozitieY + coloana])->second->getItemId()
-                    << " a fost gasit de agentul: " << this->getId() << " si are damage: "
-                    << getDamage() << " , viata : " << getHealth() << " si viteza " << getSpeed() <<" \n";
-
-        delete items.find(mapOfTheGame[pozitieX + linie][pozitieY + coloana])->second;
-        items.erase(mapOfTheGame[pozitieX + linie][pozitieY + coloana]);
-        setItemEquiped(mapOfTheGame[pozitieX + linie][pozitieY + coloana]);
-        mapOfTheGame[pozitieX + linie][pozitieY + coloana] = getId();
+        mapOfTheGame[pozitieX + linie][pozitieY + coloana] = this->id;
     }
+
+
+    sfarsit:
     //// trebuie sa dau return la Agentul care trebuie sters in functie de lupta dintre ei
     if (trebuieSters > 0)
         return trebuieSters;
