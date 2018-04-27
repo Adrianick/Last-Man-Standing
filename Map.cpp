@@ -2,14 +2,11 @@
 //
 // Created by Adrian on 3/30/2018.
 //
-#include <iostream>
 #include <random>
 #include <chrono>
-#include "Agent.h"
 #include "Agent_Type1.h"
 #include "Agent_Type2.h"
 #include "Agent_Type3.h"
-#include "Item.h"
 #include "Item_Type1.h"
 #include "Item_Type2.h"
 #include "Item_Type3.h"
@@ -212,7 +209,7 @@ void Map::rundaJoc() {
     afisareInformatiiCurente();
 }
 
-void Map::afisareHarta() {
+void Map::afisareHarta(std::ostream, Map &harta) {
 
     std::cout << " X  |Y: ";
     for(int i=1; i<=15; i++){
