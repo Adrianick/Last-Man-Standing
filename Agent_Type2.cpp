@@ -54,6 +54,7 @@ int Agent_Type2::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
                         linieLow = l;
                         coloanaLow = c;
                     }
+                    if(mapOfTheGame[pozitieX + l][pozitieY + c] > 0)
                     if (this->damage - agents.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second->getHealth() >= 0){
                         Agent &agentInamic = *(agents.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second);
                         std::cout << "ONE SHOT !!! \n";
@@ -130,23 +131,7 @@ int Agent_Type2::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
     std::cout << "Agentul: " << this->id << " paseste pe linia: " << pozitieX+linie+1 << " si coloana: "
               << pozitieY+coloana+1 << "\n";
 
-  /*  if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] > 0) {
-        Agent &agentInamic = *(agents.find(mapOfTheGame[pozitieX + linie][pozitieY + coloana])->second);
-        trebuieSters = luptaAgenti(*this, agentInamic);
-        mapOfTheGame[pozitieX][pozitieY] = 0;
-
-        std::cout << "O lupta a avut loc intre agentul: " << this->id << " si agentul: " << agentInamic.getId() << " \n";
-
-        if (agentInamic.getHealth() < 1) {
-            mapOfTheGame[pozitieX + linie][pozitieY + coloana] = this->id;
-            setPosition(pozitieX + linie, pozitieY + coloana);
-
-            std::cout << "Agentul: " << this->id << " a castigat lupta si a ramas cu : " << this->health << " viata" << " \n";
-        } else
-            std::cout << "Agentul: " << agentInamic.getId() << " a castigat lupta si a ramas cu : "
-                      << agentInamic.getHealth() << " viata" << " \n";
-
-    } else */ if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) {
+     if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) {
         setPosition(pozitieX + linie, pozitieY + coloana);
         mapOfTheGame[pozitieX][pozitieY] = 0;
         mapOfTheGame[pozitieX + linie][pozitieY + coloana] = this->id;

@@ -57,6 +57,7 @@ int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
                     linieLow = l;
                     coloanaLow = c;
                 }
+                if(mapOfTheGame[pozitieX + l][pozitieY + c] > 0)
                 if(this->damage - agents.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second->getHealth() >= 0) {
                     Agent &agentInamic = *(agents.find(mapOfTheGame[pozitieX + l][pozitieY + c])->second);
                     std::cout << "ONE SHOT !!! \n";
@@ -159,7 +160,7 @@ int Agent_Type1::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &age
         std::cout << "Agentul: " << agentInamic.getId() << " a castigat lupta si a ramas cu : "
                   << agentInamic.getHealth() << " viata" << " \n";
 
-    } else/* if (mapOfTheGame[pozitieX + linie][pozitieY + coloana] == 0) */{
+    } else {
         setPosition(pozitieX + linie, pozitieY + coloana);
         mapOfTheGame[pozitieX][pozitieY] = 0;
         mapOfTheGame[pozitieX + linie][pozitieY + coloana] = this->id;

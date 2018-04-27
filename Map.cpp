@@ -15,13 +15,17 @@
 #include "Item_Type3.h"
 
 
+void Map::getNrAg(){
+    std::cout << numberOfAgentsAlive;
+}
+
 Map::Map() {
 
     unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
     std::default_random_engine e(seed);
 
     numberOfAgentsAlive = 20;
-    numberOfItemsAvailable = 0;
+    numberOfItemsAvailable = 15;
     for (int i = 0; i < 15; i++) {
         for (int j = 0; j < 15; j++) {
             mapOfTheGame[i][j] = 0;
@@ -125,9 +129,8 @@ void Map::setNumberOfItemsAvailable(int items){
     numberOfItemsAvailable = items;
 }
 
-Map::~Map() {
+// Map::~Map() {}
 
-}
 void Map::simulareJoc() {
     int nrRunde = 0;
         while(numberOfAgentsAlive > 1){
@@ -183,12 +186,14 @@ void Map::simulareRunde() {
 
 void Map::rundaJoc() {
    // for(auto it : agents){
+    int nrAgentiDeSters;
     for(auto it = agents.begin(); it != agents.end();++it){
 
         if((*it).second->getHealth() < 1)
             continue;
 
         int desters = (*it).second->moveAgent(mapOfTheGame, agents, items);
+        nrAgentiDeSters = numberOfAgentsAlive;
         if(desters > 0) {
             numberOfAgentsAlive--;
            // delete agents.find(desters)->second;
@@ -198,6 +203,7 @@ void Map::rundaJoc() {
         numberOfItemsAvailable = items.size();
     }
     for(int i=1; i<=20; ++i){
+        if(agents.count(i))
         if(agents.find(i)->second->getHealth() < 1) {
             delete agents.find(i)->second;
             agents.erase(i);

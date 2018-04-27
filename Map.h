@@ -23,8 +23,9 @@ class Map {
 
 public:
     Map();
-    ~Map();
+   // ~Map();
 
+    void getNrAg();
     void rundaJoc();
     void simulareJoc();
     void simulareRunde();
