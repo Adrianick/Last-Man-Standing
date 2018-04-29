@@ -15,7 +15,7 @@ void Item::setDamageBonus(int dmgB) {
     damageBonus = dmgB;
 }
 
-int Item::getDamageBonus() {
+int Item::getDamageBonus() const {
     return damageBonus;
 }
 
@@ -23,7 +23,7 @@ void Item::setSpeedBonus(int spdB) {
     speedBonus = spdB;
 }
 
-int Item::getSpeedBonus() {
+int Item::getSpeedBonus() const {
     return speedBonus;
 }
 
@@ -31,7 +31,7 @@ void Item::setHpBonus(int hpB) {
     hpBonus = hpB;
 }
 
-int Item::getHpBonus() {
+int Item::getHpBonus() const {
     return hpBonus;
 }
 
@@ -39,7 +39,7 @@ void Item::setItemId(int id) {
     itemId = id;
 }
 
-int Item::getItemId() {
+int Item::getItemId() const {
     return itemId;
 }
 

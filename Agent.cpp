@@ -14,7 +14,7 @@ Agent::Agent(int health, int damage, int speed, int itemEquipedId) {
 }
 
 
-void Agent::itemEquip(Item *item) {
+void Agent::itemEquip(const Item *item) {
 
     if ((this->health + item->getHpBonus()) > 0)
         this->health += item->getHpBonus();

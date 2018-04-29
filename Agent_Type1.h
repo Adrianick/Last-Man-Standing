@@ -16,9 +16,9 @@ class Agent_Type1 : public Agent {
 public:
     Agent_Type1();
 
-    int moveAgent(int map[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items) override;
+    int moveAgent(int map[15][15], std::map<int, Agent *> const &agents, std::map<int, Item *> &items) override;
 
-    void itemEquip(Item *item) override;
+    void itemEquip(const Item *item) override;
 };
 
 

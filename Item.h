@@ -22,26 +22,23 @@ public:
     Item(int damage, int speed, int health);
 
     void setDamageBonus(int dmgB);  // aici setez damage-ul
-    int getDamageBonus();
+    int getDamageBonus() const;
 
     void setSpeedBonus(int spdB);
 
-    int getSpeedBonus();
+    int getSpeedBonus() const;
 
     void setHpBonus(int hpB);
 
-    int getHpBonus();
+    int getHpBonus() const;
 
     void setItemId(int id);
 
-    virtual int getItemId();
+    int getItemId() const;
 
     void setItemPosition(int linie, int coloana);
 
     std::pair<int, int> getItemPosition();
-
-    /// sa fac cat sa dureze sau alteceva virtual
-
 
     virtual void decayItem()=0;
 };

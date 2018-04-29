@@ -22,7 +22,6 @@ class Map {
 
 public:
     Map();
-    // ~Map();
 
     void getNrAg();
 
@@ -32,7 +31,6 @@ public:
 
     void simulareRunde();
 
-    //void afisareHarta();
     friend std::ostream &operator<<(std::ostream &o, Map &harta);
 
     void afisareInformatiiCurente();

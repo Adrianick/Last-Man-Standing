@@ -8,7 +8,7 @@
 
 Agent_Type2::Agent_Type2() : Agent(120, 35, 1, 0) {}
 
-void Agent_Type2::itemEquip(Item *item) {
+void Agent_Type2::itemEquip(const Item *item) {
 
     if (item->getHpBonus() < 0)
         if ((this->health + item->getHpBonus()) > 0)
@@ -25,7 +25,7 @@ void Agent_Type2::itemEquip(Item *item) {
 
 /// Agentul 2 cauta sa se lupte mai presus de orice, din cauza asta, daca nici un agent nu e in raza lui de actiune
 /// o sa verifice doar  daca pozitia in care se indreapta este  == 0 (goala) sau else (un item)
-int Agent_Type2::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents,
+int Agent_Type2::moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> const &agents,
                            std::map<int, Item *> &items) { /// Acesta se va misca doar pe diagonale
 
     unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
