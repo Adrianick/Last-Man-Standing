@@ -11,11 +11,6 @@
 #include "Item_Type2.h"
 #include "Item_Type3.h"
 
-
-void Map::getNrAg(){
-    std::cout << numberOfAgentsAlive;
-}
-
 Map::Map() {
 
     unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
@@ -29,43 +24,28 @@ Map::Map() {
         }
     } /// Harta este goala, doar 0
 
-    for(int i=1; i<=9; i++) /// Creare agent_type1 in numar de 9
+    for (int i = 1; i <= 9; i++) /// Creare agent_type1 in numar de 9
     {
-        agents.insert(std::make_pair(i,new Agent_Type1()));
+        agents.insert(std::make_pair(i, new Agent_Type1()));
         agents.find(i)->second->setId(i);
         int linie, coloana;
-        while(1){
-            linie = e()%15, coloana = e()%15;
-            if(mapOfTheGame[linie][coloana] == 0) {
+        while (true) {
+            linie = e() % 15, coloana = e() % 15;
+            if (mapOfTheGame[linie][coloana] == 0) {
                 agents.find(i)->second->setPosition(linie, coloana);
                 mapOfTheGame[linie][coloana] = i;
                 break;
             }
         }
     }
-    for(int i=10; i<=15; i++) /// Creare agent_type2 in numar de 6
+    for (int i = 10; i <= 15; i++) /// Creare agent_type2 in numar de 6
     {
-        agents.insert(std::make_pair(i,new Agent_Type2()));
+        agents.insert(std::make_pair(i, new Agent_Type2()));
         agents.find(i)->second->setId(i);
         int linie, coloana;
-        while(1){
-            linie = e()%15, coloana = e()%15;
-            if(mapOfTheGame[linie][coloana] == 0) {
-                agents.find(i)->second->setPosition(linie, coloana);
-                mapOfTheGame[linie][coloana] = i;
-                break;
-            }
-        }
-    }
-
-    for(int i=16; i<=20; i++) /// Creare agent_type3 in numar de 5
-    {
-        agents.insert(std::make_pair(i,new Agent_Type3()));
-        agents.find(i)->second->setId(i);
-        int linie, coloana;
-        while(1){
-            linie = e()%15, coloana = e()%15;
-            if(mapOfTheGame[linie][coloana] == 0) {
+        while (true) {
+            linie = e() % 15, coloana = e() % 15;
+            if (mapOfTheGame[linie][coloana] == 0) {
                 agents.find(i)->second->setPosition(linie, coloana);
                 mapOfTheGame[linie][coloana] = i;
                 break;
@@ -73,77 +53,95 @@ Map::Map() {
         }
     }
 
-
-    for(int i=-1; i>=-5; i--) /// Creare item_type1 in numar de 5
+    for (int i = 16; i <= 20; i++) /// Creare agent_type3 in numar de 5
     {
-        items.insert(std::make_pair(i,new Item_Type1()));
-        items.find(i)->second->setItemId(i);
+        agents.insert(std::make_pair(i, new Agent_Type3()));
+        agents.find(i)->second->setId(i);
         int linie, coloana;
-        while(1){
-            linie = e()%15, coloana = e()%15;
-            if(mapOfTheGame[linie][coloana] == 0) {
-                items.find(i)->second->setItemPosition(linie, coloana);
-                mapOfTheGame[linie][coloana] = i;
-                break;
-            }
-        }
-    }
-    for(int i=-6; i>=-10; i--) /// Creare item_type1 in numar de 5
-    {
-        items.insert(std::make_pair(i,new Item_Type2()));
-        items.find(i)->second->setItemId(i);
-        int linie, coloana;
-        while(1){
-            linie = e()%15, coloana = e()%15;
-            if(mapOfTheGame[linie][coloana] == 0) {
-                items.find(i)->second->setItemPosition(linie, coloana);
-                mapOfTheGame[linie][coloana] = i;
-                break;
-            }
-        }
-    }
-    for(int i=-11; i>=-15; i--) /// Creare item_type1 in numar de 5
-    {
-        items.insert(std::make_pair(i,new Item_Type3()));
-        items.find(i)->second->setItemId(i);
-        int linie, coloana;
-        while(1){
-            linie = e()%15, coloana = e()%15;
-            if(mapOfTheGame[linie][coloana] == 0) {
-                items.find(i)->second->setItemPosition(linie, coloana);
+        while (true) {
+            linie = e() % 15, coloana = e() % 15;
+            if (mapOfTheGame[linie][coloana] == 0) {
+                agents.find(i)->second->setPosition(linie, coloana);
                 mapOfTheGame[linie][coloana] = i;
                 break;
             }
         }
     }
 
+
+    for (int i = -1; i >= -5; i--) /// Creare item_type1 in numar de 5
+    {
+        items.insert(std::make_pair(i, new Item_Type1()));
+        items.find(i)->second->setItemId(i);
+        int linie, coloana;
+        while (true) {
+            linie = e() % 15, coloana = e() % 15;
+            if (mapOfTheGame[linie][coloana] == 0) {
+                items.find(i)->second->setItemPosition(linie, coloana);
+                mapOfTheGame[linie][coloana] = i;
+                break;
+            }
+        }
+    }
+    for (int i = -6; i >= -10; i--) /// Creare item_type1 in numar de 5
+    {
+        items.insert(std::make_pair(i, new Item_Type2()));
+        items.find(i)->second->setItemId(i);
+        int linie, coloana;
+        while (true) {
+            linie = e() % 15, coloana = e() % 15;
+            if (mapOfTheGame[linie][coloana] == 0) {
+                items.find(i)->second->setItemPosition(linie, coloana);
+                mapOfTheGame[linie][coloana] = i;
+                break;
+            }
+        }
+    }
+    for (int i = -11; i >= -15; i--) /// Creare item_type1 in numar de 5
+    {
+        items.insert(std::make_pair(i, new Item_Type3()));
+        items.find(i)->second->setItemId(i);
+        int linie, coloana;
+        while (true) {
+            linie = e() % 15, coloana = e() % 15;
+            if (mapOfTheGame[linie][coloana] == 0) {
+                items.find(i)->second->setItemPosition(linie, coloana);
+                mapOfTheGame[linie][coloana] = i;
+                break;
+            }
+        }
+    }
 
 
     std::cout << "Harta initiala  arata astfel: \n";
-    afisareHarta();
+    std::cout << *this; // afisare harta
 }
-void Map::setNumberOfItemsAvailable(int items){
+
+void Map::setNumberOfItemsAvailable(int items) {
     numberOfItemsAvailable = items;
 }
 
-// Map::~Map() {}
+void Map::getNrAg() {
+    std::cout << numberOfAgentsAlive;
+}
 
 void Map::simulareJoc() {
     int nrRunde = 0;
-        while(numberOfAgentsAlive > 1){
-            rundaJoc();
-            nrRunde++;
+    while (numberOfAgentsAlive > 1) {
+        rundaJoc();
+        nrRunde++;
 
-            if(nrRunde % 5 == 0) {
-                for(auto i : items)
-                    i.second->decayItem();
-            }
+        if (nrRunde % 5 == 0) {
+            for (auto i : items)
+                i.second->decayItem();
         }
+    }
     std::cout << "Agentul castigator este : " << agents.begin()->first << " ";
 
-   if(agents.begin()->second->getItemEquiped() != 0)
-    std::cout << " si a castigat manuind item-ul : " << agents.begin()->second->getItemEquiped()
-    << " viata : " << agents.begin()->second->getHealth() << " si damage : " << agents.begin()->second->getDamage();
+    if (agents.begin()->second->getItemEquiped() != 0)
+        std::cout << " si a castigat manuind item-ul : " << agents.begin()->second->getItemEquiped()
+                  << " viata : " << agents.begin()->second->getHealth() << " si damage : "
+                  << agents.begin()->second->getDamage();
 
     std::cout << "\n";
     std::cout << "Numar total de runde : " << nrRunde << "\n";
@@ -153,27 +151,26 @@ void Map::simulareJoc() {
 void Map::simulareRunde() {
     int nrRunde = 0;
     char c;
-    while(numberOfAgentsAlive > 1){
+    while (numberOfAgentsAlive > 1) {
         std::cout << "Vrei sa continui la urmatoarea runda? Apasa orice litera inafara de 'n' :";
         std::cin >> c;
-        if(c == 'n')
+        if (c == 'n')
             break;
         rundaJoc();
         nrRunde++;
 
-        if(nrRunde % 5 == 0) {
-                for(auto i : items)
-                    i.second->decayItem();
+        if (nrRunde % 5 == 0) {
+            for (auto i : items)
+                i.second->decayItem();
         }
     }
 
-   if(numberOfAgentsAlive == 1) {
-       std::cout << "Agentul castigator este : " << agents.begin()->first << " ";
-       if (agents.begin()->second->getItemEquiped() != 0)
+    if (numberOfAgentsAlive == 1) {
+        std::cout << "Agentul castigator este : " << agents.begin()->first << " ";
+        if (agents.begin()->second->getItemEquiped() != 0)
             std::cout << " si a castigat manuind item-ul : " << agents.begin()->second->getItemEquiped();
-   }
-    else
-      std::cout << " Nici un castigator deoarece sunt mai multi agenti in viata  \n";
+    } else
+        std::cout << " Nici un castigator deoarece sunt mai multi agenti in viata  \n";
 
 
     std::cout << "\n";
@@ -182,66 +179,62 @@ void Map::simulareRunde() {
 }
 
 void Map::rundaJoc() {
-   // for(auto it : agents){
-    int nrAgentiDeSters;
-    for(auto it = agents.begin(); it != agents.end();++it){
+    for (auto it = agents.begin(); it != agents.end(); ++it) {
 
-        if((*it).second->getHealth() < 1)
+        if ((*it).second->getHealth() < 1)
             continue;
 
         int desters = (*it).second->moveAgent(mapOfTheGame, agents, items);
-        nrAgentiDeSters = numberOfAgentsAlive;
-        if(desters > 0) {
+        if (desters > 0) {
             numberOfAgentsAlive--;
-           // delete agents.find(desters)->second;
-           // agents.erase(desters);
         }
 
         numberOfItemsAvailable = items.size();
     }
-    for(int i=1; i<=20; ++i){
-        if(agents.count(i))
-        if(agents.find(i)->second->getHealth() < 1) {
-            delete agents.find(i)->second;
-            agents.erase(i);
-        }
+    for (int i = 1; i <= 20; ++i) {
+        if (agents.count(i))
+            if (agents.find(i)->second->getHealth() < 1) {
+                delete agents.find(i)->second;
+                agents.erase(i);
+            }
     }
     afisareInformatiiCurente();
 }
 
-void Map::afisareHarta(std::ostream, Map &harta) {
-
-    std::cout << " X  |Y: ";
-    for(int i=1; i<=15; i++){
-        std::cout << i << "  ";
-        if(i<10)
-            std::cout << " ";
+std::ostream &operator<<(std::ostream &o, Map &harta) {
+    o << " X  |Y: ";
+    for (int i = 1; i <= 15; i++) {
+        o << i << "  ";
+        if (i < 10)
+            o << " ";
     }
-    std::cout << "\n";
-    for(int i=1; i<=70; i++){
-        std::cout << "_";
+    o << "\n";
+    for (int i = 1; i <= 70; i++) {
+        o << "_";
     }
-    std::cout << "\n";
+    o << "\n";
 
     for (int i = 0; i < 15; i++) {
-        if(i<9) std::cout << " ";
-        std::cout << i+1 << "  |   ";
+        if (i < 9) o << " ";
+        o << i + 1 << "  |   ";
         for (int j = 0; j < 15; j++) {
-            std::cout << mapOfTheGame[i][j]<< " ";
-            if(mapOfTheGame[i][j] > -10)
-                std::cout<< " ";
-            if(mapOfTheGame[i][j] <= 9 && mapOfTheGame[i][j] >= 0) std::cout << " ";
+            o << harta.mapOfTheGame[i][j] << " ";
+            if (harta.mapOfTheGame[i][j] > -10)
+                o << " ";
+            if (harta.mapOfTheGame[i][j] <= 9 && harta.mapOfTheGame[i][j] >= 0) o << " ";
         }
-        std::cout << "| \n\n";
+        o << "| \n\n";
     }
-    for(int i=1; i<=70; i++){
-        std::cout << "-";
+    for (int i = 1; i <= 70; i++) {
+        o << "-";
     }
-    std::cout << "\n";
+    o << "\n";
+
+    return o;
 }
 
-void Map::afisareInformatiiCurente(){
-    afisareHarta();
+void Map::afisareInformatiiCurente() {
+    std::cout << *this;
     std::cout << "Agenti in viata : " << numberOfAgentsAlive << "\n";
     std::cout << "Iteme pe harta : " << numberOfItemsAvailable << "\n\n";
 }

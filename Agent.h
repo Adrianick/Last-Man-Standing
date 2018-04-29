@@ -24,25 +24,36 @@ protected:
 
 public:
     void setHealth(int hp);
+
     int getHealth();
+
     void setDamage(int dmg);
+
     int getDamage();
+
     void setSpeed(int spd);
+
     int getSpeed();
+
     void setId(int index);
+
     int getId();
 
     Agent(int health, int damage, int speed, int itemEquipedId);
 
     void setPosition(int linie, int coloana);
+
     std::pair<int, int> getPosition();
+
     void setItemEquiped(int item);
+
     int getItemEquiped();
 
-    int luptaAgenti(Agent & agent1, Agent & agent2); /// returnam id-ul celui care trebuie sters!
+    int luptaAgenti(Agent &agent1, Agent &agent2); /// returnam id-ul celui care trebuie sters!
 
     virtual int moveAgent(int mapOfTheGame[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items)=0;
-    virtual void itemEquip(Item * item)=0;
+
+    virtual void itemEquip(Item *item)=0;
 
 };
 

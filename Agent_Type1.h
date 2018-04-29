@@ -11,13 +11,14 @@
 #include "Item.h"
 #include "Map.h"
 
-class Agent_Type1 : public Agent{
+class Agent_Type1 : public Agent {
 
 public:
     Agent_Type1();
 
     int moveAgent(int map[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items) override;
-    void itemEquip(Item * item) override ;
+
+    void itemEquip(Item *item) override;
 };
 
 

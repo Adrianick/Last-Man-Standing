@@ -4,43 +4,50 @@
 
 #include "Item.h"
 
-Item::Item(int damage, int speed, int health){
+Item::Item(int damage, int speed, int health) {
     damageBonus = damage;
     speedBonus = speed;
     hpBonus = health;
 }
 
 
-void Item::setDamageBonus(int dmgB){
+void Item::setDamageBonus(int dmgB) {
     damageBonus = dmgB;
 }
-int Item::getDamageBonus(){
+
+int Item::getDamageBonus() {
     return damageBonus;
 }
-void Item::setSpeedBonus(int spdB){
+
+void Item::setSpeedBonus(int spdB) {
     speedBonus = spdB;
 }
-int Item::getSpeedBonus(){
+
+int Item::getSpeedBonus() {
     return speedBonus;
 }
-void Item::setHpBonus(int hpB){
+
+void Item::setHpBonus(int hpB) {
     hpBonus = hpB;
 }
-int Item::getHpBonus(){
+
+int Item::getHpBonus() {
     return hpBonus;
 }
 
-void Item::setItemId(int id){
+void Item::setItemId(int id) {
     itemId = id;
 }
-int Item::getItemId(){
+
+int Item::getItemId() {
     return itemId;
 }
 
-void Item::setItemPosition(int linie,int coloana){
+void Item::setItemPosition(int linie, int coloana) {
     itemPositionOnMap.first = linie;
     itemPositionOnMap.second = coloana;
 }
-std::pair<int, int> Item::getItemPosition(){
+
+std::pair<int, int> Item::getItemPosition() {
     return itemPositionOnMap;
 }

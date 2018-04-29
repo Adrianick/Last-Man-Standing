@@ -14,7 +14,8 @@ public:
     Agent_Type3();
 
     int moveAgent(int map[15][15], std::map<int, Agent *> &agents, std::map<int, Item *> &items) override;
-    void itemEquip(Item * item) override;
+
+    void itemEquip(Item *item) override;
 };
 
 

@@ -7,11 +7,12 @@
 
 #include "Item.h"
 
-class Item_Type3 : public  Item{
+class Item_Type3 : public Item {
 
 public:
     Item_Type3();
-    void decayItem() override ;
+
+    void decayItem() override;
 };
 
 

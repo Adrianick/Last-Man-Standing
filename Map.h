@@ -6,7 +6,6 @@
 #define SURVIVALGAMEPOOPROIECT2_MAP_H
 
 
-
 #include <vector>
 #include <utility>
 #include <map>
@@ -23,17 +22,23 @@ class Map {
 
 public:
     Map();
-   // ~Map();
+    // ~Map();
 
     void getNrAg();
+
     void rundaJoc();
+
     void simulareJoc();
+
     void simulareRunde();
-    void afisareHarta();
+
+    //void afisareHarta();
+    friend std::ostream &operator<<(std::ostream &o, Map &harta);
+
     void afisareInformatiiCurente();
+
     void setNumberOfItemsAvailable(int items);
 };
-
 
 
 #endif //SURVIVALGAMEPOOPROIECT2_MAP_H

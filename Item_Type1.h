@@ -11,7 +11,8 @@ class Item_Type1 : public Item {
 
 public:
     Item_Type1();
-    void decayItem() override ;
+
+    void decayItem() override;
 };
 
 

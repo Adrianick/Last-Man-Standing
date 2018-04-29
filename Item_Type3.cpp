@@ -7,8 +7,8 @@
 Item_Type3::Item_Type3() : Item(35, 1, -20) {}
 
 void Item_Type3::decayItem() {
-    if(hpBonus < 0)
-      hpBonus += 4;
-    if(damageBonus > 0)
+    if (hpBonus < 0)
+        hpBonus += 4;
+    if (damageBonus > 0)
         damageBonus -= 5;
 }

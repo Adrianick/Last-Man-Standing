@@ -23,13 +23,21 @@ public:
 
     void setDamageBonus(int dmgB);  // aici setez damage-ul
     int getDamageBonus();
+
     void setSpeedBonus(int spdB);
+
     int getSpeedBonus();
+
     void setHpBonus(int hpB);
+
     int getHpBonus();
+
     void setItemId(int id);
+
     virtual int getItemId();
-    void setItemPosition(int linie,int coloana);
+
+    void setItemPosition(int linie, int coloana);
+
     std::pair<int, int> getItemPosition();
 
     /// sa fac cat sa dureze sau alteceva virtual
